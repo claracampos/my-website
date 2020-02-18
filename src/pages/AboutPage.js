@@ -72,6 +72,16 @@ const AboutPage = () => {
           club - which is an endless source of knowledge and fun. Meetings are
           held every month for both groups and I always look forward to them.
         </Description>
+        <Description heading="About this website">
+          I built this website using React and drew inspiration from the movie
+          <i> TRON</i> for its 1980s arcade game look. The design was achieved
+          by mixing Bootstrap and custom CSS. If you want to see the code behind
+          it, check out{" "}
+          <a href="https://github.com/claracampos/my-portfolio" target="blank">
+            my repository
+          </a>
+          .
+        </Description>
         <div className="p-4"></div>
         <NavButton url="/portfolio" label="> Porfolio" />
         <NavButton url="/" label="< Home" />
