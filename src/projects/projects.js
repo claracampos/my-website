@@ -1,6 +1,7 @@
 import chatImg from "../media/proj-chat.jpg";
 import hamletImg from "../media/proj-hamlet.jpg";
 import travelImg from "../media/proj-travel.jpg";
+import travelAPIImg from "../media/proj-tmapi.jpg";
 
 const projects = [
   {
@@ -19,6 +20,14 @@ const projects = [
     url: "https://travelminutes.netlify.com/",
     github: "https://github.com/claracampos/travel-minutes",
     img: travelImg
+  },
+  {
+    title: "Travel Minutes API",
+    description: "A backend alternative for the Travel Minutes React app.",
+    tech: "Node.js, Express and Mongoose.",
+    url: "https://travel-minutes-api.herokuapp.com/",
+    github: "https://github.com/claracampos/travel-minutes-api",
+    img: travelAPIImg
   },
   {
     title: "Hamlet Helper",
