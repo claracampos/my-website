@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import projects from "../projects/projects";
 
 const PortfolioItem = props => {
-  const { title, img, description, tech, url, github } = props.project;
-  const [imgLoaded, setImgLoaded] = useState(false);
+  const { title, img, description, tech, url, github } = projects[props.index];
+  const [qtyOfImgsLoaded, setQtyOfImgsLoaded] = useState(0);
 
-  if (imgLoaded) {
+  if (qtyOfImgsLoaded === projects.length) {
     return (
       <div className="px-3 py-2">
         <img
@@ -38,14 +39,16 @@ const PortfolioItem = props => {
 
   return (
     <div className="container-fluid">
-      <img
-        src={img}
-        alt={`Screenshot of "${title}"`}
-        onLoad={() => setImgLoaded(true)}
-        loading="eager"
-        className="d-none"
-      />
       <h1 className="intro-title">Loading web apps...</h1>
+      {projects.map((project, index) => (
+        <img
+          src={project.img}
+          alt={`Screenshot of "${project.title}"`}
+          onLoad={() => setQtyOfImgsLoaded(index + 1)}
+          loading="eager"
+          className="d-none"
+        />
+      ))}
     </div>
   );
 };
